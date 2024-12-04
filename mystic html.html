@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Webpage and Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .multimedia, .form-section {
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button, select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form-group-inline label {
+            width: auto;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multimedia Webpage</h1>
+        
+        <div class="multimedia">
+            <h2>Audio Element</h2>
+            <audio controls>
+                <source src="C:users\sam\Desktop\New html\m1.mp3" type="audio/mpeg">
+                
+            </audio>
+            
+            <h2>Video Element</h2>
+            <video controls poster="poster.jpg" width="100%">
+                <source src="C:\users\sam\Desktop\New html\v1.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                
+            </video>
+        </div>
+        
+        <div class="form-section">
+            <h2>Registration Form</h2>
+            <form action="/submit" method="post">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required char="@" maxlegth="30">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="18" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="form-group-inline">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female" required> Female</label>
+                        <label><input type="radio" name="gender" value="Other" required> Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
